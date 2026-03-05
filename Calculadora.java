@@ -12,6 +12,8 @@ public class Calculadora {
             return suma();
         } else if (operacion.equalsIgnoreCase("multiplicacion")) {
             return multiplicacion();
+        } else if (operacion.equalsIgnoreCase("division")) {
+            return (int) dividir();
         }
         return 0; // Por defecto
     }
@@ -22,5 +24,13 @@ public class Calculadora {
 
     public int multiplicacion() {
         return num1 * num2;
+    }
+
+    public double dividir() {
+        if (num2 != 0) {
+            return (double) num1 / num2;
+        } else {
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
     }
 }
