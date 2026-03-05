@@ -10,11 +10,17 @@ public class Calculadora {
     public int realizarOperacion(String operacion) {
         if (operacion.equalsIgnoreCase("suma")) {
             return suma();
+        } else if (operacion.equalsIgnoreCase("multiplicacion")) {
+            return multiplicacion();
         }
         return 0; // Por defecto
     }
 
     public int suma() {
         return num1 + num2;
+    }
+
+    public int multiplicacion() {
+        return num1 * num2;
     }
 }
