@@ -10,11 +10,18 @@ public class Calculadora {
     public int realizarOperacion(String operacion) {
         if (operacion.equalsIgnoreCase("suma")) {
             return suma();
+        } else if (operacion.equalsIgnoreCase("resta")) {
+            return resta();
         }
         return 0; // Por defecto
     }
 
     public int suma() {
         return num1 + num2;
+    }
+
+    
+    public int resta() {
+    return num1 - num2;
     }
 }
